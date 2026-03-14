@@ -9,6 +9,7 @@ export const NavBar = () => {
             <Link to='/' className="text-2xl font-extrabold">Rick and Morty</Link>
         </div>
         <div className="flex gap-4 ">
+            <Link to='/' className="">Home</Link>
           <Link to="/humans">Humans</Link>
           <Link to="/estado">Estado</Link>
         </div>

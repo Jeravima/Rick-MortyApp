@@ -6,6 +6,7 @@ export const RickApp = () => {
   return (
     <>
       <RouterProvider router={appRouter} />
+     
       <Footer/>
     </>
   );

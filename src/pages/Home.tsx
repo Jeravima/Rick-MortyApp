@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Card } from "../components/Card";
-import { NavBar } from "../components/ui/NavBar";
 import banner from '../assets/Banner.webp'
 
 
@@ -44,7 +43,6 @@ export const Home = () => {
   
   return (
     <>
-      <NavBar />
       <div className="flex flex-col  justify-center items-center ">
         <img src={banner} alt="banner" className="min-h-20"/>
 
