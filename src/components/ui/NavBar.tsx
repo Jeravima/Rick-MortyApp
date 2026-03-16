@@ -10,7 +10,7 @@ export const NavBar = () => {
         </div>
         <div className="flex gap-4 ">
             <Link to='/' className="">Home</Link>
-          <Link to="/humans">Humans</Link>
+          <Link to="/especies">Especies</Link>
           <Link to="/estado">Estado</Link>
         </div>
       </div>

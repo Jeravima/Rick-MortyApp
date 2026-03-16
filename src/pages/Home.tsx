@@ -1,50 +1,15 @@
-import { useState, useEffect } from "react";
 import { Card } from "../components/Card";
-import banner from '../assets/Banner.webp'
-
-
-interface Personaje {
-  id: number;
-  name: string;
-  image: string;
-  gender: string;
-}
-
-interface APIResponse {
-  results: Personaje[];
-}
-
+import banner from "../assets/Banner.webp";
+import { useApi } from "../hooks/useApi";
+import { Button } from "../components/ui/button";
 
 export const Home = () => {
+  const { character, handleNexPage, loading } = useApi();
 
-  const [character, setCharacter] = useState<Personaje[]>([]);
-    const [nextPage, setNextPage] = useState<number>(1)
-    const [loading, setLoading] = useState(true)
-  
-    const url = `https://rickandmortyapi.com/api/character?page=${nextPage}`;
-  
-    useEffect(() => {
-      const getData = async () => {
-        try {
-          const respon = await fetch(url);
-          const data: APIResponse = await respon.json();
-          setCharacter(data.results);
-          setLoading(false)
-        } catch (error) {
-          console.log(error);
-        }
-      };
-      getData();
-    }, [nextPage]);
-  
-   const handleNexPage = () =>{
-      setNextPage((prev)=> prev +1)
-   }
-  
   return (
     <>
       <div className="flex flex-col  justify-center items-center ">
-        <img src={banner} alt="banner" className="min-h-20"/>
+        <img src={banner} alt="banner" className="min-h-10 w-full" />
 
         <button
           className="bg-blue-400 cursor-pointer hover:bg-blue-500 rounded font-semibold text-black p-2"
@@ -52,6 +17,7 @@ export const Home = () => {
         >
           Next
         </button>
+        <Button variant="ghost" onClick={handleNexPage}>Next</Button>
 
         <div>
           {loading ? (
@@ -74,4 +40,4 @@ export const Home = () => {
       </div>
     </>
   );
-}
+};
