@@ -1,7 +1,6 @@
 import { Card } from "../components/Card";
 import banner from "../assets/Banner.webp";
 import { useApi } from "../hooks/useApi";
-import { Button } from "../components/ui/button";
 
 export const Home = () => {
   const { character, handleNexPage, loading } = useApi();
@@ -17,7 +16,6 @@ export const Home = () => {
         >
           Next
         </button>
-        <Button variant="ghost" onClick={handleNexPage}>Next</Button>
 
         <div>
           {loading ? (

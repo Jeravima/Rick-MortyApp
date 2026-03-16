@@ -1,0 +1,1 @@
+{"root":["./src/rickapp.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/card.tsx","./src/components/footer.tsx","./src/components/navbar.tsx","./src/hooks/useapi.tsx","./src/layout/layout.tsx","./src/pages/especies.tsx","./src/pages/estado.tsx","./src/pages/home.tsx","./src/routes/routes.tsx"],"version":"5.9.3"}
