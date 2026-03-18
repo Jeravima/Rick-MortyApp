@@ -1,5 +1,5 @@
 import { Card } from "../components/Card";
-import banner from "../assets/Banner.webp";
+import banner from "../assets/rick_morty_banner.webp";
 import { useApi } from "../hooks/useApi";
 
 export const Home = () => {
@@ -21,7 +21,7 @@ export const Home = () => {
           {loading ? (
             <p>Cargando...</p>
           ) : (
-            <div className="flex  gap-4 flex-wrap justify-center">
+            <div className="flex  gap-y-8 gap-x-4 flex-wrap justify-center">
               {character.map((person) => (
                 <div key={person.id}>
                   <Card

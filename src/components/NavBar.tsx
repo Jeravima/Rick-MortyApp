@@ -3,16 +3,14 @@ import { Link,  } from "react-router"
 
 export const NavBar = () => {
   return (
-    <div className="flex shadow-xl  bg-amber-100 w-full min-h-15 p-4">
-      <div className="flex justify-between w-full h-auto items-center">
-        <div>
-            <Link to='/' className="text-2xl font-extrabold">Rick and Morty</Link>
-        </div>
-        <div className="flex gap-4 ">
-            <Link to='/' className="">Home</Link>
-          <Link to="/especies">Especies</Link>
-          <Link to="/estado">Estado</Link>
-        </div>
+    <div className="flex shadow-xl  w-full min-h-15 p-4 bg-[#00FFFF]">
+      <div className="  w-full h-auto  text-center">
+        
+          <Link to="/" className="text-4xl font-extrabold text-black ">
+            Rick and Morty App
+          </Link>
+        
+       
       </div>
     </div>
   );

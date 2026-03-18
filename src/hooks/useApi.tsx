@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 
-interface Personaje {
+export interface Personaje {
   id: number;
   name: string;
   image: string;
   gender: string;
+  species: string,
+  status:string
 }
 
 interface APIResponse {
@@ -39,5 +41,6 @@ export const useApi = () => {
     character,
     handleNexPage,
     loading,
+    
   };
 };

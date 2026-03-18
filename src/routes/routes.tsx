@@ -1,8 +1,7 @@
 import { createBrowserRouter } from "react-router";
-import { Especies } from "../pages/Especies";
-import { Estado } from "../pages/Estado";
 import { Home } from "../pages/Home";
 import { Layout } from "../layout/Layout";
+import { CharacterDetails } from "../pages/CharacterDetails";
 
 export const appRouter = createBrowserRouter([
   {
@@ -15,14 +14,10 @@ export const appRouter = createBrowserRouter([
       },
 
       {
-        path: "/especies",
-        element: <Especies />,
+        path: "/characterdetails/:id",
+        element: <CharacterDetails />,
       },
 
-      {
-        path: "/estado",
-        element: <Estado />,
-      },
       {
         path: "*",
         element: <Home />,
