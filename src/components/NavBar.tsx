@@ -1,13 +1,14 @@
 import { Link,  } from "react-router"
+import image from "../assets/Rick_and_Morty.png"
 
 
 export const NavBar = () => {
   return (
-    <div className="flex shadow-xl  w-full min-h-15 p-4 bg-[#00FFFF]">
-      <div className="  w-full h-auto  text-center">
+    <div className="flex shadow-xl  w-full min-h-15 p-4 ">
+      <div className=" mx-auto h-auto  flex">
         
-          <Link to="/" className="text-4xl font-extrabold text-black ">
-            Rick and Morty App
+          <Link to="/" >
+           <img src={image} alt="image" className="h-20 w-auto"/>
           </Link>
         
        
