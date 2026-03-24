@@ -1,5 +1,4 @@
 import { Card } from "../components/Card";
-import banner from "../assets/rick_morty_banner.webp";
 import { useApi } from "../hooks/useApi";
 
 export const Home = () => {
@@ -8,10 +7,9 @@ export const Home = () => {
   return (
     <>
       <div className="flex flex-col  justify-center items-center ">
-        <img src={banner} alt="banner" className="min-h-10 w-full" />
 
         <button
-          className="bg-blue-400 cursor-pointer hover:bg-blue-500 rounded font-semibold text-black p-2"
+          className="bg-indigo-400 mb-4 cursor-pointer hover:bg-indigo-500 rounded font-semibold text-white p-2"
           onClick={handleNexPage}
         >
           Next

@@ -9,12 +9,12 @@ export const appRouter = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <Home />,
       },
 
       {
-        path: "/characterdetails/:id",
+        path: "characterdetails/:id",
         element: <CharacterDetails />,
       },
 
