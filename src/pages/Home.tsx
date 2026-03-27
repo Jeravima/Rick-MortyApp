@@ -1,4 +1,5 @@
 import { Card } from "../components/Card";
+import { Pagination } from "../components/Pagination";
 import { useApi } from "../hooks/useApi";
 
 export const Home = () => {
@@ -33,6 +34,8 @@ export const Home = () => {
             </div>
           )}
         </div>
+
+        <Pagination/>
       </div>
     </>
   );
