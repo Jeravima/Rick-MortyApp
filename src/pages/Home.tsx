@@ -7,7 +7,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="flex flex-col  justify-center items-center ">
+      <div className="flex flex-col w-full justify-center items-center ">
 
         <button
           className="bg-indigo-400 mb-4 cursor-pointer hover:bg-indigo-500 rounded font-semibold text-white p-2"

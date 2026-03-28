@@ -5,9 +5,11 @@ import { Footer } from "./components/Footer";
 export const RickApp = () => {
   return (
     <>
-      <RouterProvider router={appRouter} />
+      <div >
+        <RouterProvider router={appRouter} />
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   );
 };
