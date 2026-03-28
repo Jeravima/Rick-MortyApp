@@ -17,16 +17,21 @@ export const CharacterDetails = () => {
    
   return (
     <>
-    <div>
-        <img src={character?.image} alt={character?.name} />
-        <h2>{character?.name}</h2>
-        <p>{character?.species}</p>
-        <p>{character?.status}</p>
-        <p>{character?.gender}</p>
-    </div>
-    {}
-    
-    
+      <div className="flex justify-center ">
+        <div className="flex flex-col items-center  max-w-xl rounded-lg shadow-lg overflow-hidden sm:flex-row justify-center mt-10">
+          <img
+            src={character?.image}
+            alt={character?.name}
+            className="w-full sm:w-1/2 object-cover "
+          />
+          <div className="w-full  p-2 sm:p-4 ">
+            <h2 className="font-extrabold text-3xl">{character?.name}</h2>
+            <p>Especie: {character?.species}</p>
+            <p>Estado: {character?.status}</p>
+            <p>Genero: {character?.gender}</p>
+          </div>
+        </div>
+      </div>
     </>
-  )
+  );
 }
