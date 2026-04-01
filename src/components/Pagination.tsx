@@ -15,7 +15,7 @@ export const Pagination = () => {
     <div className="mt-10 ">
       <div className="flex w-screen  gap-1 sm:gap-4 items-center justify-center">
         <button
-          className="rounded bg-green-400 transition-colors hover:bg-green-500 cursor-pointer p-2 disabled:bg-green-700 disabled:cursor-default text-xs sm:text-base   "
+          className="rounded bg-transparent transition-colors  cursor-pointer p-2 disabled:text-gray-400 disabled:cursor-default text-xs sm:text-base   "
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -35,7 +35,7 @@ export const Pagination = () => {
           .slice(0, 10)}
 
         <button
-          className="rounded bg-green-400 transition-colors hover:bg-green-500 cursor-pointer p-2 disabled:bg-green-700 disabled:cursor-default text-xs sm:text-base"
+          className="rounded bg-transparent transition-colors  cursor-pointer p-2 disabled:text-gray-400 disabled:cursor-default text-xs sm:text-base   "
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >

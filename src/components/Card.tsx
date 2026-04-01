@@ -7,11 +7,11 @@ interface CardProps {
   image: string;
 }
 
-export const Card = ({ id, name, gender, image }: CardProps) => {
+export const Card = ({  id, name, gender, image }: CardProps) => {
   const navigate = useNavigate();
 
   const handleDetails = () => {
-    navigate(`/characterdetails/${id}`);
+    navigate(`/character/${id}`);
   };
   return (
     <div

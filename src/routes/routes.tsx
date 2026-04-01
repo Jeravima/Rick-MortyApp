@@ -14,7 +14,7 @@ export const appRouter = createBrowserRouter([
       },
 
       {
-        path: "characterdetails/:id",
+        path: "character/:id",
         element: <CharacterDetails />,
       },
 
