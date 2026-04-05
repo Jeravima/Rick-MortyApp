@@ -63,7 +63,7 @@ interface APIResponse {
 
 export const useApi = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-   const currentPage = Number(searchParams.get("page") ?? "1");
+  const currentPage = Number(searchParams.get("page") ?? "1");
 
   const [character, setCharacter] = useState<Personaje[]>([]);
   const [loading, setLoading] = useState(true);

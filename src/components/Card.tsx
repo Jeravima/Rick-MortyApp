@@ -3,11 +3,10 @@ import { useNavigate } from "react-router";
 interface CardProps {
   id: number;
   name: string;
-  gender: string;
   image: string;
 }
 
-export const Card = ({  id, name, gender, image }: CardProps) => {
+export const Card = ({ id, name, image }: CardProps) => {
   const navigate = useNavigate();
 
   const handleDetails = () => {
@@ -22,7 +21,6 @@ export const Card = ({  id, name, gender, image }: CardProps) => {
       <img src={image} alt={name} loading="lazy" className="w-full" />
       <div className="p-1">
         <h2 className="font-bold text-xl">{name}</h2>
-        <p>Gender: {gender}</p>
       </div>
     </div>
   );

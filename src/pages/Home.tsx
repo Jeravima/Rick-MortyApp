@@ -27,7 +27,7 @@ export const Home = () => {
                     id={person.id}
                     image={person.image}
                     name={person.name}
-                    gender={person.gender}
+                   
                   />
                 </div>
               ))}
