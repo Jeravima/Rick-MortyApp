@@ -3,19 +3,11 @@ import { Pagination } from "../components/Pagination";
 import { useApi } from "../hooks/useApi";
 
 export const Home = () => {
-  const { character, handleNexPage, loading } = useApi();
+  const { character, loading } = useApi();
 
   return (
     <>
       <div className="flex flex-col w-full justify-center items-center ">
-
-        <button
-          className="bg-indigo-400 mb-4 cursor-pointer hover:bg-indigo-500 rounded font-semibold text-white p-2"
-          onClick={handleNexPage}
-        >
-          Next
-        </button>
-
         <div>
           {loading ? (
             <p>Cargando...</p>
@@ -27,7 +19,6 @@ export const Home = () => {
                     id={person.id}
                     image={person.image}
                     name={person.name}
-                   
                   />
                 </div>
               ))}
@@ -35,7 +26,7 @@ export const Home = () => {
           )}
         </div>
 
-        <Pagination/>
+        <Pagination />
       </div>
     </>
   );

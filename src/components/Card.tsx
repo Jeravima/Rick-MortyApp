@@ -20,7 +20,7 @@ export const Card = ({ id, name, image }: CardProps) => {
     >
       <img src={image} alt={name} loading="lazy" className="w-full" />
       <div className="p-1">
-        <h2 className="font-bold text-xl">{name}</h2>
+        <h2 className="font-bold text-xl dark:text-black">{name}</h2>
       </div>
     </div>
   );

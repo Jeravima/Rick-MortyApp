@@ -21,7 +21,7 @@ export const CharacterDetails = () => {
         {loading ? (
           <p>Cargando...</p>
         ) : (
-          <div className="flex flex-col items-center  max-w-xl rounded-lg shadow-lg overflow-hidden sm:flex-row justify-center mt-10">
+          <div className="flex flex-col items-center dark:bg-white dark:text-black max-w-xl rounded-lg shadow-lg overflow-hidden sm:flex-row justify-center mt-10">
             <img
               src={character?.image}
               alt={character?.name}
