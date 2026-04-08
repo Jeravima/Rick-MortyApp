@@ -52,4 +52,4 @@ Desplegado en Netlify con CI/CD automático.
 
 ## 👤 Autor
 
-Jesus Villalobos - [LinkedIn](tu-linkedin)
+Jesus Villalobos 
