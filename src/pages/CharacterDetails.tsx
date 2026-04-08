@@ -13,7 +13,7 @@ export const CharacterDetails = () => {
       .then((res) => res.json())
       .then((data) => setCharacter(data));
     setLoading(false);
-  }, [id]);
+  }, [id,name]);
 
   return (
     <>
