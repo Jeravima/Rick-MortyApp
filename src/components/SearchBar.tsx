@@ -26,7 +26,7 @@ export const SearchBar = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          className="w-sm rounded-xl p-2 border "
+          className="w-50 rounded-xl p-2 border "
           placeholder="Escribe un nombre..."
           onChange={handleChange}
           value={inputValue}

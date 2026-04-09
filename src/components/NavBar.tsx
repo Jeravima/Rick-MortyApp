@@ -15,7 +15,7 @@ export const NavBar = () => {
         </Link>
       </div>
 
-      <div className="ml-auto flex items-center gap-4">
+      <div className="ml-auto flex-row sm:flex  items-center gap-4">
         <SearchBar />
         <ThemeToggle />
       </div>
