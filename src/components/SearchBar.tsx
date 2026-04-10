@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { useSearchParams } from "react-router";
+import { useNavigate, useSearchParams } from "react-router";
 
 export const SearchBar = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const navigate = useNavigate()
+  const [searchParams] = useSearchParams();
   const name = searchParams.get("name") ?? "";
   const [inputValue, setInputValue] = useState(name);
 
@@ -15,9 +16,9 @@ export const SearchBar = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (inputValue.trim()) {
-      setSearchParams({ page: "1", name: inputValue.trim() });
+       navigate(`/?page=1&name=${inputValue.trim()}`);
     } else {
-      setSearchParams({ page: "1" });
+      navigate('/?page=1')
     }
   };
 
@@ -26,11 +27,13 @@ export const SearchBar = () => {
       <form onSubmit={handleSubmit}>
         <input
           type="text"
-          className="w-50 rounded-xl p-2 border "
+          className="w-50 rounded-xl p-2 border dark:bg-gray-100 dark:text-black "
           placeholder="Escribe un nombre..."
           onChange={handleChange}
           value={inputValue}
         />
+
+        <button className="rounded-lg w-20 h-9 ml-5 hover:bg-green-500 cursor-pointer p-1 bg-green-400 text-black" onClick={handleSubmit}>Buscar</button>
       </form>
     </div>
   );
