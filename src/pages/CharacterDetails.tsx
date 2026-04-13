@@ -11,15 +11,19 @@ export const CharacterDetails = () => {
   useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
       .then((res) => res.json())
-      .then((data) => setCharacter(data));
-    setLoading(false);
+      .then((data) => {
+        setCharacter(data);
+        setLoading(false);
+      });
   }, [id]);
 
   return (
     <>
       <div className="flex justify-center ">
         {loading ? (
-          <p>Cargando...</p>
+          <div className="text-center">
+            <p>Cargando información...</p>
+          </div>
         ) : (
           <div className="flex flex-col items-center dark:bg-white dark:text-black max-w-xl rounded-lg shadow-lg overflow-hidden sm:flex-row justify-center mt-10">
             <img
